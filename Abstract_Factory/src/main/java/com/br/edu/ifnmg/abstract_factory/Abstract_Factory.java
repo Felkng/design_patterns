@@ -4,7 +4,7 @@
 package com.br.edu.ifnmg.abstract_factory;
 
 import com.br.edu.ifnmg.abstract_factory.factories.MadeiraFactory;
-import com.br.edu.ifnmg.abstract_factory.factories.VitruvianaFactory;
+import com.br.edu.ifnmg.abstract_factory.factories.VitorianaFactory;
 import com.br.edu.ifnmg.abstract_factory.products.Cadeira;
 import com.br.edu.ifnmg.abstract_factory.products.Mesa;
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ public class Abstract_Factory {
     public static void main(String[] args) {
         ArrayList<Cadeira> lojaDeCadeiras = new ArrayList<>();
         lojaDeCadeiras.add(new MadeiraFactory().criarCadeira());
-        lojaDeCadeiras.add(new VitruvianaFactory().criarCadeira());
+        lojaDeCadeiras.add(new VitorianaFactory().criarCadeira());
 
         for (Cadeira x : lojaDeCadeiras) {
             x.sentar();
@@ -26,7 +26,7 @@ public class Abstract_Factory {
 
         ArrayList<Mesa> lojaDeMesas = new ArrayList<>();
         lojaDeMesas.add(new MadeiraFactory().criarMesa());
-        lojaDeMesas.add(new VitruvianaFactory().criarMesa());
+        lojaDeMesas.add(new VitorianaFactory().criarMesa());
 
         for (Mesa x : lojaDeMesas) {
             x.colocarObjetos();
